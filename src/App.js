@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import { buildQueries } from '@testing-library/react';
+
+let sesion = true
+
+const amigos = ['Diego', 'Victor' , 'Nauomi', 'Leon']
+
+function Header({title,color}) {
+  return <h1 style={{color : color ? color : 'white'}}>{title ? title : "there's nothing we can do"}</h1>
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <Header title="Hola" color="green"/>
+          <Header/>
+          <Header title="Adios"color="purple"/>
       </header>
+      {sesion === true ? 
+        <>
+        
+        <Header title="Bienvenido" color ="blue"/>
+        <p>Genial!</p>
+        <ul>
+          {amigos.map((amigo, index) => {
+            {/*esto es un fragmento*/}
+            return <li key = {index}>{amigo}</li>
+          })}
+        </ul>
+        </>
+        :
+        <p>No has iniciado sesion....</p>
+    }
     </div>
   );
 }
