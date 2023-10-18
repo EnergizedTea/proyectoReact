@@ -6,6 +6,11 @@ let sesion = true
 
 const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
 
+
+function indeAmis({amigo, index}){
+  return  <li key = {index}>{amigo}</li>
+}
+
 function Header({title,color}) {
   return <h1 style={{color : color ? color : 'white'}}>{title ? title : "there's nothing we can do"}</h1>
 }
