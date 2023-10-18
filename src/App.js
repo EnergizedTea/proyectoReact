@@ -4,7 +4,7 @@ import { buildQueries } from '@testing-library/react';
 
 let sesion = true
 
-const amigos = ['Diego', 'Victor' , 'Nauomi', 'Leon']
+const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
 
 function Header({title,color}) {
   return <h1 style={{color : color ? color : 'white'}}>{title ? title : "there's nothing we can do"}</h1>
