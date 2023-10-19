@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/header';
 import {Alumnos} from './components/alumnos';
+import {Login} from './components/login';
 
 const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
 
@@ -18,6 +19,7 @@ function App() {
             <Header title="Adios"color="purple"/>*/}
       {sesion === true ? 
         <>
+        <Login/>
         <button onClick={()=>{setSesion(false)}}>Cerrar Sesión</button>
         <Header title="Bienvenido" color ="yan"/>
         <Alumnos amigos={amigos}/>  
