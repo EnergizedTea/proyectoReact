@@ -1,14 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { buildQueries } from '@testing-library/react';
+import Header from './components/header';
 
 let sesion = true
 
 const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
-
-function Header({title,color}) {
-  return <h1 style={{color : color ? color : 'white'}}>{title ? title : "there's nothing we can do"}</h1>
-}
 
 function Alumno({nombre}){
   return <li>{nombre}</li>
