@@ -1,25 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/header';
+import {Alumnos} from './components/alumnos';
 
 let sesion = true
 
 const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
-
-function Alumno({nombre}){
-  return <li>{nombre}</li>
-}
-
-function Alumnos({alumnos}){
-  return (
-    <ul>
-      {amigos.map((amigo, index) => {
-        {/*esto es un fragmento*/}
-        return <Alumno key={index} nombre = {amigo}/>
-      })}
-    </ul>
-  )
-}
 
 function App() {
   return (
@@ -32,7 +18,7 @@ function App() {
       </header>
       {sesion === true ? 
         <>
-        <Alumnos/>
+        <Alumnos amigos={amigos}/>
         <Header title="Bienvenido" color ="blue"/>
         <p>Genial!</p>
         
