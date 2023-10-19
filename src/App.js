@@ -12,15 +12,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          <Header title="Hola" color="green"/>
-          <Header/>
-          <Header title="Adios"color="purple"/>
+          <Header title="Mi Primer Proyecto de React" color="cyan"/>
+          <img src={logo} className="App-logo" alt="logo" />
+          {/*<Header/>
+            <Header title="Adios"color="purple"/>*/}
       {sesion === true ? 
         <>
-        <Alumnos amigos={amigos}/>
         <button onClick={()=>{setSesion(false)}}>Cerrar Sesión</button>
-        <Header title="Bienvenido" color ="blue"/>
+        <Header title="Bienvenido" color ="yan"/>
+        <Alumnos amigos={amigos}/>  
         <p>Genial!</p>
         </>
         :
