@@ -4,10 +4,25 @@ import { buildQueries } from '@testing-library/react';
 
 let sesion = true
 
-const amigos = ['Diego', 'Victor' , 'Nauomi', 'Leon']
+const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
 
 function Header({title,color}) {
   return <h1 style={{color : color ? color : 'white'}}>{title ? title : "there's nothing we can do"}</h1>
+}
+
+function Alumno({nombre}){
+  return <li>{nombre}</li>
+}
+
+function Alumnos({alumnos}){
+  return (
+    <ul>
+      {amigos.map((amigo, index) => {
+        {/*esto es un fragmento*/}
+        return <Alumno key={index} nombre = {amigo}/>
+      })}
+    </ul>
+  )
 }
 
 function App() {
@@ -21,15 +36,10 @@ function App() {
       </header>
       {sesion === true ? 
         <>
-        
+        <Alumnos/>
         <Header title="Bienvenido" color ="blue"/>
         <p>Genial!</p>
-        <ul>
-          {amigos.map((amigo, index) => {
-            {/*esto es un fragmento*/}
-            return <li key = {index}>{amigo}</li>
-          })}
-        </ul>
+        
         </>
         :
         <p>No has iniciado sesion....</p>
