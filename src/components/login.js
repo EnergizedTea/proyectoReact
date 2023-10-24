@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 export const Login = () => {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
-
+    const [state, setState] = useState('')
     /*para Tarea*/
 
     const usuarioReal = 'Rafa'
@@ -23,6 +23,8 @@ export const Login = () => {
         else if(e.target.name === 'pass'){
             setPassword(e.target.value)
         }
+
+        /*if de vic*/
     }
 
   return (
@@ -31,6 +33,7 @@ export const Login = () => {
         <form action=''>
             <p>User : {user}</p>
             <p>Password : {password}</p>
+            <p>State : {state}</p>
             <div>
                 <label htmlFor="user">Usuarios</label>
                 <input type="text" name="user" id="user" 
@@ -45,6 +48,16 @@ export const Login = () => {
 
             <button type='submit'>Iniciar Sesión</button>
         </form>
+        {
+        user === usuarioReal && password === passwordReal ?
+            <>
+            <div>Iniciando Sesión</div>
+            </>
+            :
+            <>
+            <div>Incorrecto</div>
+            </>
+        }
     </>
-  )
+  );
 }

@@ -21,7 +21,7 @@ function App() {
         <>
         <Login/>
         <button onClick={()=>{setSesion(false)}}>Cerrar Sesión</button>
-        <Header title="Bienvenido" color ="yan"/>
+        <Header title="Bienvenido" color ="cyan"/>
         <Alumnos amigos={amigos}/>  
         <p>Genial!</p>
         </>
