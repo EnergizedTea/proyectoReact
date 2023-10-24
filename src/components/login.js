@@ -23,8 +23,6 @@ export const Login = () => {
         else if(e.target.name === 'pass'){
             setPassword(e.target.value)
         }
-
-        /*if de vic*/
     }
 
   return (
