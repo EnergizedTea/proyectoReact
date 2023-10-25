@@ -9,7 +9,7 @@ const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
 
 function App() {
   // let sesion = true
-  const[sesion, setSesion] = useState(true)
+  const[sesion, setSesion] = useState(false)
   return (
     <div className="App">
       <header className="App-header">
@@ -28,6 +28,7 @@ function App() {
         :
         <>
           <p>No has iniciado sesion....</p>
+          <Login/>
           <button onClick={()=>{setSesion(true)}}>Iniciar Sesión</button>
         </>
     }

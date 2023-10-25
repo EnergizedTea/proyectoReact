@@ -44,18 +44,18 @@ export const Login = () => {
                     onChange={onChange}/>
             </div>
 
-            <button type='submit'>Iniciar Sesión</button>
+            <button type='submit' onClick={()=>{
+                user === usuarioReal && password === passwordReal ?
+                    <>
+                    <div>Iniciando Sesión</div>
+                    </>
+                    :
+                    <>
+                    <div>Incorrecto</div>
+                    </>
+
+            }}>Iniciar Sesión</button>
         </form>
-        {
-        user === usuarioReal && password === passwordReal ?
-            <>
-            <div>Iniciando Sesión</div>
-            </>
-            :
-            <>
-            <div>Incorrecto</div>
-            </>
-        }
     </>
   );
 }
