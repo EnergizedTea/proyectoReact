@@ -7,21 +7,15 @@ let sesion = true
 const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
 
 
-function retAmi({amigo, color}){
-  return  <h1 style ={{color:color}}>{amigo}</h1>
-}
-
-function lisAmis({amigos}){
-  return (
-    <div>
-      <ul>
-        {amigos.map((amigo,i) => {
-          <li key={i}>
-            <retAmi amigo={amigo} color="red"/>
-          </li>
-        })}
-      </ul>
-    </div>
+function ListaAlumnos({amigos}){
+  return(
+    <ul>
+      {
+        amigos.map((amigo, index) => {
+          return <li key={index}>{amigo}</li>
+        })
+      }
+    </ul>
   )
 }
 
@@ -43,7 +37,7 @@ function App() {
         
         <Header title="Bienvenido" color ="blue"/>
         <p>Genial!</p>
-        <lisAmis amigos = {amigos} />
+        <ListaAlumnos amigos={amigos}/>
         
         </>
         :
