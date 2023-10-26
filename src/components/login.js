@@ -4,6 +4,7 @@ export const Login = () => {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
     const [state, setState] = useState('')
+    const [ret, setRet] = useState('')
     /*para Tarea*/
 
     const usuarioReal = 'Rafa'
@@ -45,16 +46,15 @@ export const Login = () => {
             </div>
 
             <button type='submit' onClick={()=>{
-                user === usuarioReal && password === passwordReal ?
-                    <>
-                    <div>Iniciando Sesión</div>
-                    </>
-                    :
-                    <>
-                    <div>Incorrecto</div>
-                    </>
-
-            }}>Iniciar Sesión</button>
+                if({user}.value === usuarioReal.name && 
+                    {password}.value === passwordReal.name){
+                    setState('Bienvenido Rafa')
+                    setRet(true)
+                }
+                else{
+                    setState('Usuario Desconocido')
+                    setRet(false)
+                }}}>Iniciar Sesión</button>
         </form>
     </>
   );
