@@ -4,15 +4,15 @@ import { buildQueries } from '@testing-library/react';
 
 let sesion = true
 
-const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon']
+const amigos = ['Diego', 'Victor' , 'Naomi', 'Leon', 'Rafa']
 
 
 function ListaAlumnos({amigos}){
   return(
     <ul>
       {
-        amigos.map((amigo, index) => {
-          return <li key={index}>{amigo}</li>
+        amigos.map((amigo) => {
+          return <li>{amigo}</li>
         })
       }
     </ul>
