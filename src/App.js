@@ -34,11 +34,9 @@ function App() {
       </header>
       {sesion === true ? 
         <>
-        
         <Header title="Bienvenido" color ="blue"/>
         <p>Genial!</p>
         <ListaAlumnos amigos={amigos}/>
-        
         </>
         :
         <p>No has iniciado sesion....</p>
